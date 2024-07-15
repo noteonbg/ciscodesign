@@ -1,0 +1,526 @@
+intent first language next.
+
+After all all things in design, finally what it means 
+we must have a functions and variables working.
+
+definition
+all design should finally boil down to some functions and variables.
+
+what is my intent
+to solve customer problems or improve my technical skills at customers
+cost..
+
+science ... respecting theory becomes very important.
+
+myth i will learn some rules hence i can do good design, 
+we can learn all the rules but important thing to know these are guidelines
+we cannot become fan of any rules..
+
+checklist, we dont want to depend on people heroism...
+not having a checklist means that we have to depend on people heorims
+that means no repeatability..
+
+context matters 
+
+hardest question to ask in the project.
+do you know what will change, what will not change... time perspective.
+if this question is not answered, any design will fail.
+
+no interfaces.. no header files..
+somebody is making a vehicle, whether it will flop or a hit, they have done some homework
+and hope that homework is right..
+
+any architecture.
+1. layering.
+2. communiation takes place between layers.. both positive and negative ones..
+3. consistency.. in design..
+
+Design patterns.
+0. have a systems view..
+1. hopefully we know the architecture we want to persue..
+2. OOps.
+
+what is difference between class and interface.?
+what is difference between a .c file and .h file?
+
+lot of times important concepts are understandable only if we value collaboration.
+constructor..
+think of two people X and Y
+X is creating the class
+Y is using the class.
+X wants to impose some conditions on Y while creating the object, so X can think of constructor.
+
+Inheritance.
+1. super class is written by X
+2. subclass is written by Y.
+
+class and interface difference.
+class is like a product, usable... you can create object of it.
+interface is like a standard.  ==standard is not usable straight away.. you use a product which
+adhers o he standard.. you create an object whose class implements the interface..
+
+class is meant for encapsulation-- I am using the class == i am calling the function of the class.
+interface is meant for abstraction.  == you are getting some function, you know what function
+does, how it does we dont care...
+
+I hate all this i like code only help me..
+1. class can contain non static variables.
+2. interface will not have non static variables..
+
+Object orientedness.
+1. Abstraction**
+2. encapsulation
+3. relationship between classes**
+4. packages...
+
+** means this consumes lot of time in a project, NO I wont spend time here ok enjoy stupid design..
+
+Object orientedness != just writing classes.
+
+
+
+
+database world.  mature design.
+
+1. interface is designed by java guys  4
+2. implementation is designed by database vendor. 3
+3. we the programmers are the users  , 1,2,4 and hence dont care for 3.
+
+myth if I do too many examples only then I understand things.. really?
+
+1. do you know what will change in the project.
+2. 1,2,3,4 entire thing we should know when we tell interface..
+
+class can implement multiple interfaces.
+
+a product can implement multiple standards which is ok.
+
+we cannot create an object of theinterface,ok standard is not usable and it is usable by using a product
+which adhers to the standard..
+
+
+Relationship between classes.
+
+
+1. loose  - dependency
+
+we have two classes A and B.
+we have a function f1 in class B
+f1 needs an object of class A , that means A object is local.
+local local  local only then use the word dependency, in other cases dont use the word
+
+if class X object is needed for function f3 of class Y only then we say 
+Y is dependant on X for the function f3.
+this is called as dependency.
+
+@Service
+class X
+{
+
+@autowired
+public void f1(A obj)
+{
+
+}
+
+
+}
+
+relationship == earthworm level = coding level == scope..
+when people mess scope of variable.. they land up with a logical mess in the code..
+
+
+
+
+2. moderate -- association
+2.1 aggregation
+2.2 composition.
+whole and the part..
+
+association.. there is non local variable of part inside the whole
+
+class A
+{
+   private B obj;  // obj is not local, obj is a reference
+
+
+   public A(B obj)  //looking at this function, we know it is aggregation
+	{
+		this.obj = obj;
+	}
+
+  public A()  {   obj=new B();  //composition }
+
+
+
+public void f1() { need to use same obj}
+public void f2() { need to use same obj }	
+
+A ==Mobile
+B == SimCard
+
+
+	
+
+
+
+
+}
+
+
+
+
+if part is created outside the whole and given to the whole.. it is called as aggregation
+if part is created inside the whole , it is called as composition
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. strong-- Inheritance..
+
+when in doubt use loose relationships
+
+we designed interfaces, what next to do design classes, what do you mean design classes, figure
+out relationship between classes. how to figure out, do we know the domain..
+
+
+Inheritance.
+
+1. generalization..
+2. runtime polymorphism.
+
+if you are looking only for 2, then dont touch inheritance, stick with interface that will do.
+
+how to abuse inheritance, tell reusabililty. that is a very broad word which can mean many things..
+
+
+hello world inheritance.
+
+1. have a super class.
+2. have a subclass.
+let them have non static variables...
+
+System class , Math class in java, is it final good, even if they were not final
+it is no worth inheritance, because they dont give anything to the subclass object.
+X is a bankrupt person.. he owns everybody lot of money, he tells inherit from me, I will tell thank you.
+
+String class is worth inheriting but java guys have told us that they wont allow
+us to inherit..
+String class is  rich guy, I want to tell him allow me to inherit from you.. he tells No I wont allow.
+
+super class which does not have non static variables is unfit to the a super class.
+
+
+1. prove super class has got non static variables.
+2. prove subclass has got non static variables.
+3. put a "is a " test.. dont skip this... because lot of things look good in English bad technically
+4. create the object of subclass.
+5. access the function of the super class and function of the subclass.. 
+if we can do 1 to 5. then hello world inheritance is done.
+
+what is advantage we get with inheritance...
+advantage 1.. maintenance
+1. add a feature to the super class.
+2. no need to make any changes in the subclass.
+3. all the subclass objects will now access the new feature added in the super class.
+
+Runtime polymorphism.
+1. it is non final function call done by using a reference of the super class or reference of an interface.
+
+
+Device d =?;  ? can be ThermalDevice, IODevice, MemoryDevice
+d.activateDevice();
+
+// you shold come to Device and prove activateDevice  is non final function
+? what is it we may not till runtime.
+
+
+Device *d=new Device;
+d->activateDevice();
+activateDevcie  a virtual function.
+
+class A
+{
+public String threeString() {  return "hi"; }
+public String toString()  { return "fine";  }
+
+
+}
+
+A obj = new A();
+System.out.println(obj);  //we can sure println will never call threeString why..
+input argument to println is Object reference..
+
+Object o =new A();
+forget about accessing exclusive functions of A.
+
+in java every class by default extends the object class.
+
+class A extends Object
+
+In the object class there is a function called toString
+which is not final.. it can be overriddeen
+
+
+
+A obj = new A();
+System.out.println(obj);
+
+Object ref = obj; //once you see this line.
+
+ref is reference of type Object
+obj is an object of type class A.
+then forget about ref accessing any exclusive function of class A.
+the only function in class A it can access is only overridden functions of the object class.
+
+
+
+what is input argument for println function, worst answer is object of class A,
+println was written in 1995
+A class written in 2024.
+there is no way println can take A class object as input argument..
+
+
+
+
+class Person
+	final void setName(String name)
+	void work() 
+
+class Doctor extends Person
+	void work()  { dw }
+	void doSurgery() { ds }
+
+class Police extends Person
+	void work()  { pw }
+	void controlTraffic() { ct }
+
+
+Person p =? // we dont know which object we are getting.
+p.work();//this is example of runtime polymorphism;
+p.controlTraffic() or p.doSurgery();
+
+
+A design person who has not programmed is unfit to be a designer.
+
+       
+1. interface.
+2. class relationships.
+1 and 2 if we are not clear then we cannot talk about any thing in design patterns.
+
+rule in design
+do bad things by telling good things.. always..
+
+
+1. interface.
+2. class relationships
+2.1 dependency.
+2.2 association ( aggregation and composition)
+2.3 inheritance ( simple checklist for inheritance)
+3. runtime polymorphism (inheritance, interfaces, if intent is only runtime polymorphism interface is enough)
+
+
+no checklist to start design is first sign that team will lot of unlimited entertainment in the project.
+
+
+super scary word is performance..
+
+performance is we should measure how things are working?
+
+
+Design patterns..
+
+design a calculator program which adds two numbers, multiples two numbers,
+and devices two numbers...
+
+//app 1
+for(int i=0; i < 3; i++)
+   s.o.p(i);
+
+
+//app 2
+Stringbuilder b =new StringBuilder();
+for(int i=0; i <3; i++)
+	b.append(i);
+s.o.p(b)
+
+use the underlying hardware completely.. and measure are we using it or not..
+
+1. as far as performance dont trust.. check...by profiling
+2. respect some theory... and check.. io will be bottleneck unnecessary multithreading creates problems.
+3. how to identify the slowest part function in the code...
+
+1. oops part
+2. performance collect data and respect theory.
+3. any person who tells which is his favourite programming languge, which is favourite datastructure
+which is favourite design pattern or architecture is confirming his stupidity..
+
+in Datastructures, we dont choose by starting with a name, we first list
+operations and then pick one from the library....
+
+I like ArrayList, horrible.. no ..
+I needed a dynamic array where i will add elements and view all elenmetns and occasionly do  search.
+this is a need in the library, ArrayList fits in..
+
+dont start with the name... start with operations and then pick one..
+
+I am going to pick some design patterns, because I feel those may get applied frequently...
+
+
+1. Observer Design pattern.
+2. Strategy Design pattern.
+3. Template Pattern.
+4. Proxy Pattern
+5. Factory
+6. Singleton.
+
+
+Intent. learn design patterns with intent to apply
+and not to tell other people I know design patterns.
+
+
+
+some scenario X
+see are you able to explain this scenario X independently without thinking of design patterns.
+X = event handling.
+ok do you know what happens in Event Source
+do you know what happens in Event Listener
+
+kids problem designing interface is tough, designing a class is easy.
+so do the easy job and ensure project is permanent hell.
+interface design is tough because you have to answer the question from a time persective
+what will change, what will not change...
+
+after house warming ceremony tap will leak.. then suggestion by IT people let us build new house..
+
+100% tight coupling = bad idea..
+100% loose coupling == bad idea.'
+
+time persective matters and most important do you know what will change, what will not change..
+
+for any design pattern.
+
+1. first see wheter you know the scenario
+2. see what is minimum coded for the design pattern.
+3. in google or online we will get lot of addons . which we can ignore ... if our context does not need it.
+
+copy paste 2 examples on observer design pattern.
+find 2 inbuilt examples on observer design pattern.
+find 2 inbuilt examples in framework level on observer pattern.
+
+
+lunch break till 2.00PM and we will join back.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
