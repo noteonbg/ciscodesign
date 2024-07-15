@@ -1,0 +1,28 @@
+We have a group of Devices. which are characterized by deviceid, devicestatus and devicelocationid. fillup this group with some devices objects.
+	. show  a menu as follows
+		 Menu 1
+
+		1. start the App
+		0. exit
+		enter your choice.
+		
+		
+when start the app is selected by entering 1, ask for deviceid. if the deviceid is found in the group we created, then show a menu as following.
+
+		Menu 2		
+
+		1. update the device
+		2. view device details.
+		3. view device details based on status
+		4. view device details based on locationid.
+		5. back 
+
+in case deviceid is not found in the group, ask for deviceid, devicestatus and location
+add that to the group provided deviceid is not found. then come back to the menu 1.
+
+for Menu2 , the functionality is as below
+	
+when 1 is selected ask for new devicestatus and devicelocation and update that alone
+when 2 is selected show the deviceid, device status and devicelocationid.
+when 3 is selected ask for status and shwo the devices based on the given status.
+when 4 is selected ask for locationid and show the device id and status based on the location.
