@@ -2,6 +2,8 @@
 /*
 
 
+
+
 The Command Design Pattern is a behavioral design pattern that encapsulates a request as an object,
  allowing for the separation of sender and receiver. It’s particularly useful for parameterizing clients with 
  different requests, queuing requests, and supporting undoable operation
@@ -31,7 +33,7 @@ The invoker triggers the execution of commands.
 
 */
 
-#if 0
+#if 1
 
 #include <iostream>
 

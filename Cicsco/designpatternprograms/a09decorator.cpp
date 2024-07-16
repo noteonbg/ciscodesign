@@ -30,7 +30,7 @@ Decorators can be stacked to create complex combinations of features.
 
 
 
-#if 0
+#if 1
 
 #include <iostream>
 #include <string>
@@ -76,8 +76,8 @@ public:
 
 // Usage
 int main() {
-    HVACDevice* ac = new AirConditioner();
-    HVACDevice* acWithTempControl = new TemperatureControlDecorator(ac, 22);
+    HVACDevice* ac = new AirConditioner();//FileWriter
+    HVACDevice* acWithTempControl = new TemperatureControlDecorator(ac, 22);  //PrintWriter code
 
     acWithTempControl->turnOn();
     // Output: Air conditioner turned ON. Setting temperature to 22°C.

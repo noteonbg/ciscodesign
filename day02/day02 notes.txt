@@ -1,0 +1,577 @@
+service, dao.
+
+what do we put inside what
+we put service inside dao  -1
+or we put dao inside service.--2
+
+mvc-- Photo and PhotoFrame
+do we put model in view --x
+or do  we put view in model  --y
+or do we controller in view and model --z
+
+3 category of technical people in manufacturing
+
+BE
+Diploma
+ITI
+
+
+
+
+
+
+
+
+Finally all design is about function design.
+I cannot look for shortcuts..
+
+4 important rules in design
+
+0. tradeoff.
+1. layering
+2. how you communicate between layers.
+3. consistency.
+
+As a technical person we dont need to be a sales person for any technology.
+
+many times people talk about advantage of X and disadvantage of Y
+there by proving they are sales people for X.
+
+technical people should be very very stingy in using adjectives or adverbs.
+
+
+intent is to use in our project and not to tell other people I know this.
+
+
+most people want "language pleasure" English pleasure
+
+when you add non value things to a project process stop and ask is it necessary..
+
+IT is good if non It people use it.
+
+The architecture will scream at us its disadvantages also 
+we are focused on advantages that is ok..
+
+
+SOLID principles of class design.
+
+
+S --single responsility principle a  class should do only one thing..
+
+String 
+Integer
+ArrayList
+
+
+IO Functions
+FileWriter..
+
+
+
+
+
+how to recognize a stupid person.
+flavor 1
+ he wont follow rules.
+
+flavor 2
+he will become fan of rules.
+
+
+
+
+
+when it comes to class design
+constructor design is part of it.
+how do you design constructor only if you know the problem statemenets.
+
+can we think what will change, what will not change, only then you
+can think of single responsible principle..
+
+open closed principle.
+
+program to an interface...
+then somebody who is 2, gets the benefit when 3 changes
+because of 4.
+
+knowing interface usage.. is called O principle in SOLID class design
+
+Shopping.
+   Payment...
+
+SBIPayment...
+ICICIPayment
+GreatPayment comes after 20 years.. ok. fine we can still incorporate
+
+GreatmenPayment indicates shopping is open for new things.
+closed. SBI Paymetn or ICICI payment nothings changes inside it...
+
+If I want learn something technical let logic not kidnap me...
+
+L 
+is Lishov substitutability principle
+
+1. this applies if you got a hierarchy.
+2. if you look at the super class, you should be able to navigate
+with any object of the hierarchy by only looking at functions available
+in the super class. 
+(coding) earth worm is asking what does it mean? a super class should have
+decent amount of non final functions.
+
+we designed a super class called X.
+X has got many subclasses let us Y and Z.
+in our code we create objects of Y and Z.
+but to operate on the objects of Y and Z,  all we need to do is
+look at documentation of X. we dont need to open documentation of Y or Z.
+if we can do that, it means we followed Lishovs substituablity principle.
+
+a person who has designed a hierarchy and forces people to go thru the entire
+hierarchy to use it... does not know the meaning of hierarchy..
+
+
+S --moral science .. what  is single depends on our exposure to the domain.
+O -- program to the interface,, so new 3 keeps appearing 2 is peaceful.
+L -- Liskhov substitublity principle
+you have a hierarchy. look at the super class have the ability to operate
+on the subclass objects.
+I  -- Interface segregation principle.
+when you design an interface guarantee yourself that methods present in
+the interface are minimal. 
+I have an interface with 10 functions..ask why 10 functions can we reduce
+it or is some function more needs to be added get clarity based on
+how we understood the domain..
+
+what do kids do
+keep on increasing the number of rules to follow
+
+what do adults do.
+ask the question are these rules necessary wherever possible minimize.
+
+making rules hobby, making entities follow rules painful..
+
+
+interface musicmobile.
+void transfermusic
+void playmusic
+void adjustmusic
+void incomingcall
+void outoingcall
+void sendsms
+
+split this interface by using ISP
+interface music
+void transfermusic
+void playmusic
+void adjustmusic
+
+
+
+interface mobile
+void incomingcall
+void outoingcall
+void sendsms
+
+interface musicmobile extends mobile,music
+
+
+all vehicles needs registration certificate.
+yellow board
+white boards
+heavy carriage vehicles..
+
+D - dependency injection, I think this is place where you feel
+tonnes of noise in google.. and all 100 people will kidnap in 100 different directions.
+
+
+Depedancy Injection
+
+1. talk about Dependancy
+2. then talk about INjecction.
+
+
+dependency
+two entities are loosely related..
+
+there is a switch in my house which is not working..
+
+so I have to call an electrician X.
+
+for electrician X to repair the switch what should he do.
+
+1. X should come to my house and stay for 3 months
+2. I should stay in X house for 3 months
+
+giving the wrong scope for a variable in the code.
+
+class MyHouse
+{
+
+public void replaceSwitch(Electrician e)
+{
+
+}
+
+}
+
+MyHouse depends on Electrician for the function replaceSwitch.
+MyHouse depends on Plumber for function plumbing
+
+
+Injection..
+who is creating the object,
+instead of we creating th object ask the framework to create the object.
+
+class A
+{
+
+public void f1(B obj)
+{
+
+}
+
+}
+this is dependency.
+
+
+
+@component
+class A
+{
+
+@autowired
+public void f1(B obj)
+{
+
+}
+
+}
+
+dependency injection.
+
+do bad things by telling good things.
+everything which we thought was lightweight is being made heavy...
+this creates irritation especially in cloud based world remember you pay...
+
+
+
+
+
+
+
+
+S- moral science
+O  -- use interface and take sympathy on 2 and keep on creating new 3's
+L  -- once you got a hierarchy dont force users to navigate the heirarachy
+I -- ensure interface contains minimum functions
+D  -- dependency , then comes injection.
+OLID is not moral science it is specific ..
+
+complicated for IOC .. Inversion of control.
+1. instead of we creating objects ask framework to create objects there by you can detect eventgs
+and enforce some logic while creating objects.
+
+Reflection is slow 
+I am tolerating slowness because of the advantage I get..
+
+SOLID design principles for OO design
+
+List l =new ArrayList ( ... x)  -- again respecting LSP principle of oo design.
+ArrayList l1=new ArrayList(  ..y )  //stupid people.. until they prove they have called
+an exclusive function of ArrayList.
+
+Singleton.
+people have strong opinions about it who cares for their opions
+
+what is your context.
+we need a single state across the application... you can have only object..
+suddenly ghosts wakeup and tell I have threading implications... we should tell the ghost
+relax.. we will discuss threading separately...
+
+anybody wants to guess what is biggest problem in doing threading by programmers?
+my problem is people dont read threading from os perspective and learn threading
+only from language perspective, that is a sign they can create lot of entertainment
+for other people.
+
+Threading, process, IO --starting point is not programming language, starting point
+is get some decent theory at OS level for them..
+
+
+
+Runtime r =Runtime.getRuntime();
+Runtime r1 = Runtime.getRuntime();
+if( r==r1)  -- will print true, proof of singleton.
+
+
+Class c = Class.forName("java.lang.String");
+Class c1 = Class.forName("java.lang.String");
+
+if ( c== c1 ) //come true.. singleton..
+
+While working on singleton
+ok we can create only object ok.... but remember after getting the object
+what do we do, call non static functions, operate on the object.
+
+1. you wanted to get the object,, only one object for entire application (singleton)
+
+
+story is like this.
+
+1. architecture is important.. excel sheet is important, models are known..
+2. we iterate..
+3. know some OO theory on interface, relationship between classes.
+4. know some scenarios and then pick design pattern.
+4.1 observer.
+4.2 strategy
+4.3 proxy
+4.4 template.
+4.5 factory
+4.6 singleton.
+5. some more rules for OO design, SOLID principles...
+
+
+Try collecting or writing 
+2 code samples on 
+ISP
+and dependency injection.
+
+
+Singleton tells you can only object, boundary is what we define and not the pattern.
+
+
+x.properties
+y.properties.
+
+
+ResourceBundle r =ResourceBundle.getBundle(x.properties);
+ResourceBundle r1 =ResourceBundle.getBundle(x.properties);
+if(r == r1)
+
+
+ResourceBundle r2 =ResourceBundle.getBundle(y.properties);
+ResourceBundle r3 =ResourceBundle.getBundle(y.properties);
+r2 == r3
+
+
+
+
+Try collecting or writing 
+2 code samples on 
+ISP
+and dependency injection.
+
+in a05aditionalreference folder 
+there is a file called Network Monitoring System.docx
+
+1.dont worry about diagram
+2. come up with a design, how it will look like.
+3. what will be its architecture.
+4. think of interface, class relationship
+5. think where you can apply the 6 design patterns..
+observer, strategy
+proxy, template
+factory,singleton.
+
+
+at the end of day design is function design.
+input argument and return type..
+here challenge is getting the models right..
+
+creating a variable and then thinking what operations you want to perform...
+
+first think of operations
+then create the variable..
+
+think of non creational design.. 
+factory.. singleton.. this is not a priority
+Observer.
+Singleton
+proxy...
+
+
+can we get into details...
+UML.. diagrams.. can it be sustained...
+
+Unit Testing..
+
+I know rules now I can do design, nothing is more ridiculous than this.
+
+IO programs 
+in java you can write 100 IO programs
+for the kid it is 100programs for person who knows decorator design pattern it is just 1 progam.
+
+
+FileWriter fw =new FileWriter("a.txt
+);
+PrintWriter pw =new PrintWriter(fw);
+pw.println("hello");
+
+NetworkWriter fw =new NetWorkWriter(
+);
+PrintWriter pw =new PrintWriter(fw);
+pw.println("hello");
+
+what is HttpServlet.
+HttpSErvlet is adapter for a servlet.
+
+
+what is a Httpservlet.
+adapter for a servlet.
+
+if maintenance is not valued, then layering will be considered as complicating things..
+
+
+1. decorator
+2. command pattern
+3. adapter pattern
+
+
+
+state is for what
+
+1. class
+2. function
+3. variable. -->
+
+class Rct
+{
+
+public:
+	int length;
+	int breadth;
+
+}
+
+
+
+Rct r;
+r.length=3;
+r.breadth=4;
+
+I can tell state for r... value contained in non static variables..
+
+In Distributed computing. reduce the number of method calls.
+
+dont start thinking of design patterns from the name...
+
+think of your context and see which one is relevant..
+
+
+
+decorator
+command
+state if context  is there..
+
+ok there see if context comes think of using it.
+
+
+
+fascade
+adapter
+composite..
+
+
+try the following..
+1. collect some examples on decorator, command, state pattern.
+2. cisco\assingments\a03Case studies design.doc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -428,6 +428,238 @@ find 2 inbuilt examples in framework level on observer pattern.
 lunch break till 2.00PM and we will join back.
 
 
+final function
+we have a function f1 in the class X and class X is telling that any subclasses of class X
+should never reinterpret f1 they should use it the way it has been given.
+
+function cannot be overridden.
+
+
+exclusive function
+1. we have a super class reference.
+2. it is pointing to a subclass object.
+3. what can the super class reference access in the subclass.
+A obj =new B();
+what can obj access in B class.
+1. only overridden functions of class A in B can be accessed.
+2. anything which is present only in B cannot be accessed.
+any function present only in B and not in A. exclusive function of B.
+
+Strategy
+ever dinosaur programming.. common place plug and play of algorithms..
+sorting
+Comparator..is used for deciding the sorting criteria at runtime.
+
+
+
+after you got comparator object.
+
+Collections.sort(listobject,comparator);  //until youi use this in java comparator will not be used.
+
+listobject.sort(comparator)
+
+proxy pattern.
+proxy should never tell I am a proxy.. 
+1. pre processing and post processing of some action.
+
+1. transactions
+2. security
+3.
+
+stub skeleton.. Distributed computing.
+RMI , CorBA
+
+
+1. Observer
+2. Strategy
+3. Proxy pattern.
+4. X+something = something becomes easy.. Template pattern.
+template... has got some rigidity and some flexibility.
+rigidity comes in form of a non overridden function in the super class.
+flexibility comes in the form of a function whichcan be overridden in the sub class.
+
+
+0. observer
+1. strategy
+2. proxy
+3. template
+
+
+
+broad intent... anything which is generic dont let people do it allow the framework to do it.
+
+
+Abstract class.
+1. a class which must be a super class.
+2. we cannot create object of it... that is secondary.
+3. in abstract class can we have constructors..
+every abstract class most of times in real life will have construcors, non static functions.
+who will call them, subclass objects will call them.
+
+
+very basic thing but important.
+
+1. functions..
+1.1 function definition
+1.2 function calling.
+1.3 function assignment != function calling.
+because there is some kind of callbacks... function wont get called immediately under some circumstance
+
+
+watch out for functions which we are not calling, system is calling, ensure those functions work properly
+and quickly by measuring..
+
+
+public static void main(String args[])
+{
+
+}
+
+toString
+lamda expressions.
+functions are not getting called by us, it is getting by system.
+
+if you use any annotation ona  function, it means that function we wont call.
+
+@getmapping("/poc")
+public String f1()
+{
+return  "hello"
+}
+
+
+2. variables.
+
+list.sort(lamdaexpression);
+
+
+1.2 function calling.
+opening documentation and seeing what function does
+how do we know whether it succeeds and whether it fails..
+
+varialbes.
+1. whether you are in python or java or c++ or javascript
+
+1. knowing data type
+2. knowing scope..
+
+how do you choose the data type?
+based on the operation we want..
+
+String i ="hello";
+String k  = i-"o";
+minus operation is not defined on string
+
+yoru biggest challenge will be identifying models in the problem statement.
+what is a model?
+project specific data type.
+we are working on different domains ok models will change.
+
+before we think of design patterns.
+1. architecture related classes.
+2. project specific data types..
+3. then think of design patterns.
+
+what does knowing architecture mean, we know the entry point and we know the exit point.
+UI ...
+Service... 
+Dao layer...
+config
+Security
+
+what are models used what are its content and what are its operations.
+content  ==non static variables inside the class.
+operations == non static functions of the class.
+
+after we create a variable what do we do, operate on it.
+after we create an object what do we  do, call non static functions.
+
+ghost needs to come to earth..
+we need get details...
+
+Factory.. why is it needed..
+allow the programmer to create an object without being bothered about the classname.
+
+give an example.
+
+Calendar c = Calendar.getInstance();//GregorianCalendar
+ResourceBundle r = ResourceBundle.getBundle("x");  // some classname.
+InetAddress r = InetAddress.getByHostName("abc.com");// intention is we dont programmer to bother whther
+IPaddress is 4 or IPaddress is 6
+
+
+X obj =new Y();
+for this to work in typically strongly typed language like java or c++
+X and Y must be related thru inheritance or Y should be  a product adhering to X standard.
+
+if we dont know basic oops especially what an interface is doing, learn everything, but no loose coupling
+possible.
+
+0. oops concept, observer design pattern.
+1. strategy .. plug and play of algorithsm.
+2. proxy ... pre and post processing actions.
+3. template... x+something = something becomes easier.. x is stemplate
+4. factory... category of class hierarchy, create an object without exposing the classname.... secretly
+linked to do we know what will change, what will not change in the project..
+5. basics of functions and variables still matter, example function being defined, think who is going to call it.
+6. data type.. content + operations, model is a data type...
+
+1. collect two examples on inheritance, collect two examples on aggregation, collect two exmaples on
+composition, collect two examples on dependency.
+
+2. go thru the readme.md notes which is GitHub.
+
+reference type belongs to X
+object belongs to Y
+
+X obj =new Y();
+I dont want to expose Y to the person who wants to use Y.
+
+InetAddress x = InetAddress.getByHostname("www.google.com");
+
+interface
+inheritance.
+
+X and Y are two people.
+Y has need to get the object of some subclass.
+X has created a factory to give Y the object of subclass he needs without Y knowing to need the subclassname.
+
+whole idea of any design is how much of isolation of change you can do.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
