@@ -7,6 +7,7 @@ Use Case Diagram:
 Identify and describe primary actors (e.g., Administrator, Network Device, Monitoring System).
 Define use cases such as Monitor Network Traffic, Manage Network Devices, Generate Reports, etc.
 Include relationships between actors and use cases.
+
 Class Diagram:
 
 Model key classes and their relationships within the monitoring system.

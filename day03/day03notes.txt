@@ -1,0 +1,443 @@
+   1. architecture == series of function calls.
+   2. this functions could be event driven or request response based..  ( I am not occupied with any design pattern)
+   3. intent of 2 is am i clear my layering..
+
+UI layer...
+
+
+web service layer ( event driven layer)
+
+public ProjectSpecificDaatype getDetails()
+{
+
+}
+
+business layer interface
+Buisness layer
+Dao layer interface
+DAO layer  --store things..
+
+web service layer --> business layer --> dao layer... = series of function calls.
+
+
+  lack of clarity..
+1. design pattern is not going to help
+2. uml diagrams help.
+
+first level assume we dont know any design pattern.
+all we know functions and classes as data type 
+
+data type = content + operation
+class  == non static variables + non static operations.
+project specific data types == this will change == Model.
+
+
+
+how to get rid of heroism in design..
+by having a process..
+
+when we have intent fighting with a process. intent will win and not the process.
+intent.. inability to get into details..
+
+layering..
+1. how are we communicating between different layers and how we know
+positive things and negative things..
+
+people who look at classes, interfaces.. ignoring the function design will land up with bad design
+because finally what will not change in computer sciene, things are series of function calls.
+
+the moment we think of a function ( define)
+I have a class X i have a function f1 in x == define..spend some time thinking who is going to call it..
+
+
+OO
+A  -- no design related classes and interfaces
+D  -- design related interfaces and classes
+
+1. interface design
+2. patiently thinking about relationship between classes.
+these two consume lot of time.. we have to spend it if we tell we are interested in OO based design..
+
+
+all all the relationships between classes.
+we did aggregation, composition, inheritance.. ==  we created a new data type.
+
+finally when we have oo design.
+1. series of interfaces
+2. series of classes..
+in the code will just become variables..
+
+OO
+1. abstraction -- interface
+2. encapsulation  -class (constructor design... non static functions, variables... )
+3. relationship between classes ( creating new data types.. Association ( aggregation and composition), inheritance)
+4. packages ( lighter topic)
+
+I designed the class X.
+1. easiest thing is name of the class.
+2. what are its non static members.
+3. do you plan to static members..
+4. tell me non static functions..
+5. tell me constructor design.  -- justify the design from business perspective.
+
+dont start with design pattern name... I need observer design pattern or decorator design pattern ==100% diaster..
+talk about your scenario ..
+
+class design principles .. atleast we should know clearly what it means.
+1. S , O, L, I, D  --leads to Aggregation..
+
+class X
+{
+
+public void junk(Y obj)
+{
+ 	
+
+}
+
+}
+X depends on Y for the function setY
+
+class X
+{
+private Y temp;.
+
+public void setY(Y obj)
+{
+ 	this.temp =obj;
+
+}
+
+}
+
+
+UML expand it.. Unified Modelling Language..
+
+no project suffers from over communication, all projects suffer from under communication.
+
+have some diagrams that indicate different sets of information for different stake holders..
+
+
+nobody wants to tell they are doing simple things.. any technology involes some amount of selling
+as a technical person we should look at thetechnology ignoring the selling aspects..
+
+is UML great, answer is yes.. but remember it does not add any value for the end customer per say..
+so what is tendancy to ignore details and write things surfacially ,that means process has been killed by bad intent.
+
+really challenge with uML diagrams is can you enforce it consistently as a process. if yes.. great, if no, think about its
+value, process followed by only one person is not a process..
+
+most of times only thing that is getting implemented in UML
+
+1. class diagrams
+2. sequence diagrams.
+
+use case diagrams in 99% cases it is followed by detailed a word document or excel document which contains the details.
+
+if we have laziness to get into details entire UML process can become a funeral that means waste of time..
+
+
+what is greatest war in any industry?
+standard vs product.
+
+customers like standard.
+companies like product.
+so how do you moderate.
+so what companies do act like you adher to  standard and deviate from the standard by adding lot of features
+and hope customer gets addicted to this features, there by effectively customer forgetting that he wanted
+a standard and now he is an addict to the product.
+
+why did sun microsystems taken by oracle ...?
+
+sun was busy making standards.. after other people made products..?
+
+know about UML but dont become fan of any tool.
+which tool take a telescope view...
+after you generated a uml diagram, code template can be generated in java or c++ these kind of tools needs to be reviewed
+before preferred.
+
+what is better.
+
+1. defining a function and calling it
+
+2. calling a function and then defining it,
+
+why i would prefer 2.
+
+call a function I can think what is input argument nd what is return type.. and what means ..
+i can use the tool any ide and tell create the function..
+
+but if you define a function the tool cannot tell where to call it..
+
+think of using first and creating next..
+sequence diagrams and then come to a class diagram.
+
+
+
+
+summary
+1. intent matters,... can we get into details.
+2. process issue.. can we enforce it consistently..
+3. which tool you are goiong to use for drawing uml, take a telescope view.. what all features you are expecting
+from a tool... my bias is towards plantuml.. because of dsl.. generate this code..telescope view.. one day ie tomorrow
+we are in world where every programmer needs to be  code reviewer.. than a code writer... becuae of tools available in world
+due to ai.
+4. i want to start from helloworld.. 
+
+class diagram will be important may be suggestion
+you first write class in normal text and then then try to draw...
+
+
+I am using the class. what does it mean
+I am calling the non static functions of the class.
+why I should not tell I am accessing variables of the class. welcome to theory
+class is meant for encapsulation.. encapsulation access data via functions.
+
+entity class.  -- something persistent
+controller class  -- logic..
+boundary class.  -- UI
+
+to compare X and Y
+first thing we should think is something superset and subset if yes dont compare..
+X =Association  ==superset
+Y==Aggreation  == subset
+
+
+class Mobile
+{
+private Sim sim;// this is not an object in java
+
+public void putSim(Sim x)
+{
+	sim =x;
+}	
+
+
+
+}
+
+
+Connection c =new Connection();
+DataSource d =new DataSource(c);  //this si example of aggregation.
+
+Decorator design full of aggregation examples..
+
+has a
+part of... 
+
+class Mobile
+{
+private Battery b;
+
+public Mobile()
+{
+	b=new Battery();
+}
+
+
+}
+battery is part of Mobile.
+battery cannot be used without Mobile.
+
+
+dependency means
+
+1. it is not association(it is not aggregation or composition), it  is not inheritance
+
+
+class House
+{
+
+
+public void replaceSwitch(Electrician e)
+{
+
+}
+}
+//Observe is electrician is local variable.
+House is dependant on Electrician for replaceSwitcch
+
+
+class Account
+int x;
+ public void f1() 
+
+class SavingAccount extends Account
+int y;
+ public void f2()
+
+
+I think telling this word f1 is inherited by savingaccount object is a bad idea..
+rather it is better to tell f1 is accessed by saving account object..
+
+what are you inheriting?
+variables.. and not functions..
+
+SavingAccount c =new SavingAccount();//break point and watch inside the object.
+
+a base class which does not have nonstatic variables is it worth calling it a base class my answer is no.
+
+
+1. in both usecase, class diagram you have seen we have gone from hello world..
+2. dont become fan of tool, dont think deeply how will i draw now.. first do zoom out fix your tool.
+3. then practice in that tool..
+
+
+
+---------------------------------
+Please attempt the following
+
+1. GitHub.. first  a03umldiagrams reference folder..
+use case diagrams
+classdiagrams.
+
+2. folder called codesamples it has been commited today..
+a01maybe.java...
+write the class diagrams..
+
+------------------------
+
+project success = process * technology * tools * culture.
+
+
+
+
+
+IN IT Industry there is one peculiar feature
+
+start from X, tell X is very bad to to hundred places and then come back to X and give a new name for X called Y
+and tell Y is latest one..
+
+X=scada... go back round and come back tell IOT
+client server applications ( vb, oracle, d2000,.. ) they told it is bad,, came back to app based things..
+
+
+what do unemployed people do in javascript, find new frameworks..
+unemployed in product.. add a feature .. and think later whether it useful.
+
+library == precompiled functions + documentation ( contract)
+
+OSGi.. copy pste .. java 11..
+
+
+
+UML
+
+1. know the diagrams..
+which stakeholders are interested in the diagrams.. based on this you choose the diagrams..
+sequence diagram and classdiagram.. 
+remaining diagrams you can write provided we know all the details..especially component diagram deployment diagram..
+
+afternoon
+there are other diagrams in UML.. only with class diagrams.. 
+we need to indicate flow. how much of details..
+most of the times we can manage with sequence diagrams..
+
+activity diagram
+deployment diagram
+package diagram
+component diagram
+timing diagram...
+
+Reembmer while using diagrams , it depends on the tool whether it supports.
+
+josh of using the diagram should also ensure it is detailed..
+doing things for formality..
+
+try a sequence diagram
+try a activity diagram.
+library which is present in usecase diagram.md try to come with a class design.. try a sequence diagram for library also.
+
+0. whatever design we do if we dont figure what it means in terms of function and variables.. design is a flop design.
+1. architecture is important
+2. fill up the excel sheet. 
+	identifying the functions, 
+ 	identifying the models
+	we will be clear about expected function design
+3. check the class design principles ( SOLID)
+4. applying the design patterns.
+apply the commonly used 6 to 7 design patterns.
+observer, strategy, template, proxy, factory, decorator, singleton, command...
+5. uml do we get process support.. can we follow it consistently with details...
+6. there is no rule we need to apply design patterns in a single case study..
+7. good design should not need a hero.. then you can some process. excel sheet..
+
+endeavorbg@gmail.com
+9449012333
+
+
+
+reflection is tradeoff between speed and configuration.
+I want to configure things hence I am ok with slowness.. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
