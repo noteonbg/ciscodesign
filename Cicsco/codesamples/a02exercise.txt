@@ -1,0 +1,44 @@
+Exercise 1: Observer Pattern
+Implement a network monitoring system where multiple components (observers) receive notifications whenever a network event occurs, such as a connection established, data received, or connection closed.
+
+Exercise 2: Factory and Strategy Patterns
+Create a system that allows clients to dynamically choose between different network protocols (TCP, UDP) and apply different strategies (encryption, compression) to data being transmitted over these protocols. Implement factories for creating protocols and strategies, and demonstrate their usage.
+
+Exercise 3: Singleton Pattern
+Develop a network connection pool manager using the Singleton pattern. The manager should ensure that only one instance exists, and it should handle acquiring and releasing network connections efficiently.
+
+Exercise 4: Proxy Pattern
+Design a proxy for a network client that logs all outgoing and incoming data packets. The proxy should intercept data transmission and reception, perform logging, and then pass the data to the actual network client implementation.
+
+Exercise 5: Composite Pattern
+Extend the Observer pattern to support hierarchical monitoring of network components. Implement a composite structure where a network component (composite) can contain multiple sub-components (leaf observers), and notifications are propagated through the hierarchy.
+
+Exercise 6: Decorator Pattern
+Create a decorator for network protocols that adds logging functionality. This decorator should wrap around existing protocol implementations (e.g., TCP, UDP) and log all data transmission and reception operations.
+
+Exercise 7: Adapter Pattern
+Develop an adapter to convert legacy network protocols (e.g., HTTP/1.x) to modern protocols (e.g., HTTP/2). The adapter should allow clients using the old protocol to seamlessly communicate with servers expecting the new protocol, translating requests and responses as necessary.
+
+Exercise 8: Builder Pattern
+Implement a builder to construct complex network requests or configurations step-by-step. For example, build a builder for constructing HTTP request objects with headers, parameters, and body content, ensuring flexibility and ease of use in request construction.
+
+Exercise 9: Command Pattern
+Create a command-based framework for network operations, where commands encapsulate operations like establishing a connection, sending data, receiving data, and closing connections. Implement a command queue and executor to manage and execute these commands asynchronously.
+
+Exercise 10: State Pattern
+Design a state machine for managing the state of network connections (e.g., disconnected, connecting, connected, error). Implement state classes representing each state and transitions between states based on network events (e.g., connection established, connection lost).
+
+Exercise 11: Template Method Pattern
+Develop a template method for performing network data processing operations. Define an abstract class that encapsulates the common structure of data processing (e.g., connect, process data, disconnect), allowing subclasses to override specific steps as needed for different protocols or operations.
+
+Exercise 12: Flyweight Pattern
+Implement a flyweight for managing shared network resources, such as common data structures or configuration settings used across multiple network components. Ensure that resources are shared efficiently to reduce memory footprint and improve performance.
+
+Exercise 13: Bridge Pattern
+Create a bridge between different network communication layers (e.g., application layer, transport layer). Design abstractions for both layers and use the bridge pattern to decouple the layers, allowing them to vary independently and facilitating easier extension or modification.
+
+Exercise 14: Iterator Pattern
+Develop an iterator for traversing network packets or data streams received from a network connection. Implement an iterator interface to provide sequential access to packets or data chunks, supporting operations like iterating forward, checking end-of-stream, and retrieving current data.
+
+Exercise 15: Memento Pattern
+Design a memento for capturing and restoring the state of network connections or transactions. Implement memento classes to store and retrieve snapshots of connection states, allowing clients to save and rollback to previous states as needed.

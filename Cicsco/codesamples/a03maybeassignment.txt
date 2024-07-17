@@ -1,0 +1,39 @@
+Design a network monitoring system that provides real-time monitoring and management of network devices and traffic within a corporate network.
+
+Requirements:
+
+Use Case Diagram:
+
+Identify and describe primary actors (e.g., Administrator, Network Device, Monitoring System).
+Define use cases such as Monitor Network Traffic, Manage Network Devices, Generate Reports, etc.
+Include relationships between actors and use cases.
+Class Diagram:
+
+Model key classes and their relationships within the monitoring system.
+Consider classes like NetworkDevice, TrafficMonitor, ReportGenerator, AlertSystem, etc.
+Specify attributes and methods for each class.
+Sequence Diagram:
+
+Illustrate the flow of interactions when monitoring network traffic.
+Show sequences of messages exchanged between components (e.g., Administrator, TrafficMonitor, NetworkDevice).
+Focus on specific scenarios like detecting anomalies in network traffic or adding new devices to monitoring.
+State Diagram:
+
+Model states and state transitions for a NetworkDevice (e.g., Online, Offline, Maintenance).
+Define events triggering state changes (e.g., Device Turned On, Device Disconnected).
+Include actions taken in response to state changes (e.g., Send Alert, Update Monitoring Dashboard).
+Component Diagram:
+
+Identify and depict high-level components of the monitoring system (e.g., Database, User Interface, Network Devices).
+Show dependencies and interfaces between components.
+Include deployment nodes if extending the diagram to deployment perspective (optional).
+Deliverables:
+
+UML diagrams (Use Case, Class, Sequence, State, Component) in a format suitable for presentation (e.g., PDF, images).
+A brief description (1-2 pages) explaining each diagram, its purpose, and how it contributes to the overall design of the network monitoring system.
+Optional: A brief narrative or storyboard illustrating a typical scenario of system usage based on the diagrams.
+Guidelines:
+
+Ensure diagrams are clear, well-labeled, and adhere to UML standards.
+Use appropriate symbols, notations, and relationships to accurately represent the system architecture and behavior.
+Consider scalability, maintainability, and performance aspects in your design.
